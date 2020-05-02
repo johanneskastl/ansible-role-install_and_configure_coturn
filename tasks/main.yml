@@ -1,8 +1,8 @@
 ---
 # /tasks/main.yml
 
-- name: "Install packages"
+- name: 'Install packages'
   package:
     name: "{{ coturn_package }}"
-    state: "present"
+    state: 'present'
   when: 'ansible_distribution != "openSUSE MicroOS"'
