@@ -1,0 +1,6 @@
+---
+# install_and_configure_coturn/defaults/main.yml
+
+coturn_package: 'coturn'
+coturn_service: 'coturn'
+path_to_turnserver_configfile: '/etc/coturn/turnserver.conf'
