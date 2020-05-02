@@ -1,0 +1,13 @@
+---
+#
+
+- name: 'Start and enable coturn'
+  service:
+    name: "{{ coturn_service }}"
+    state: 'started'
+    enabled: 'true'
+
+- name: 'Restart coturn'
+  service:
+    name: "{{ coturn_service }}"
+    state: 'restarted'
