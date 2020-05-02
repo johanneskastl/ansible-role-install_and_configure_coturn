@@ -8,3 +8,14 @@
   when: 'ansible_distribution != "openSUSE MicroOS"'
   notify:
     - 'Start and enable coturn'
+
+- name: 'Create turnserver.conf from template'
+  template:
+    src: 'turnserver.conf.j2'
+    dest: "{{ path_to_turnserver_configfile }}"
+    owner: '0'
+    group: '0'
+    mode: '0640'
+  notify:
+    - 'Start and enable coturn'
+    - 'Restart coturn'
