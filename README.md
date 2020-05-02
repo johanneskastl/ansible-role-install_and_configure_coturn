@@ -13,7 +13,17 @@ None.
 Role Variables
 --------------
 
-None.
+Variables for the role to work:
+- `coturn_package`: name of the coturn package, default value is `coturn`.
+- `coturn_service`: name of the coturn service, default value is `coturn`.
+- `path_to_turnserver_configfile`: Path to turnserver.conf, default value is `/etc/coturn/turnserver.conf`.
+
+coturn-related variables:
+- `coturn_static_auth_secret`: (Required) Shared secret to be used in the configuration.
+- `coturn_realm`: (Required) Realm to set in the configuration.
+- `path_to_coturn_tls_cert`: (Required) Path to the TLS certificate for coturn to use.
+- `path_to_coturn_tls_cert_key`: (Required) Path to the private key for the TLS certificate.
+- `path_to_coturn_tls_dh_file`: (Required) Path to a DH params file.
 
 Dependencies
 ------------
