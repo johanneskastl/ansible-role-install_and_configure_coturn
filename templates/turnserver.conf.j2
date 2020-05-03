@@ -123,7 +123,9 @@
 #
 #external-ip=60.70.80.91/172.17.19.101
 #external-ip=60.70.80.92/172.17.19.102
+{% if coturn_external_ip is defined %}
 external-ip={{ coturn_external_ip }}
+{% endif %}
 
 # Number of the relay threads to handle the established connections
 # (in addition to authentication thread and the listener thread).
