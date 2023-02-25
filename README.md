@@ -35,7 +35,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: 'ojkastl.install_and_configure_coturn' }
+         - role: 'ojkastl.install_and_configure_coturn'
 
 License
 -------
