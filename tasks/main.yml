@@ -2,7 +2,7 @@
 # /tasks/main.yml
 
 - name: 'Install packages'
-  package:
+  ansible.builtin.package:
     name: "{{ coturn_package }}"
     state: 'present'
   when: 'ansible_distribution != "openSUSE MicroOS"'
@@ -10,7 +10,7 @@
     - 'Start and enable coturn'
 
 - name: 'Create turnserver.conf from template'
-  template:
+  ansible.builtin.template:
     src: 'turnserver.conf.j2'
     dest: "{{ path_to_turnserver_configfile }}"
     owner: '0'
