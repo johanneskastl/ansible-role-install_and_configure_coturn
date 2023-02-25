@@ -5,7 +5,8 @@
   ansible.builtin.package:
     name: "{{ coturn_package }}"
     state: 'present'
-  when: 'ansible_distribution != "openSUSE MicroOS"'
+  when:
+    - 'ansible_distribution != "openSUSE MicroOS"'
   notify:
     - 'Start and enable coturn'
 
