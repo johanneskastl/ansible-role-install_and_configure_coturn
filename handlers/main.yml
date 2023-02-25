@@ -5,7 +5,7 @@
   service:
     name: "{{ coturn_service }}"
     state: 'started'
-    enabled: 'true'
+    enabled: true
 
 - name: 'Restart coturn'
   service:
